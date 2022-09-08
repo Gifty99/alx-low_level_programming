@@ -3,8 +3,8 @@
 /**
  *
  *  * main function that does the following;
- *   * Print
- *   * Return: 0
+ *
+ *   * Return: 
  *
  *    */
 
