@@ -2,9 +2,9 @@
 
 /*
  *
- *  * main function that contains the print function
+ * main: function that contains the print function
  *
- *   * Return:
+ * Return:
  *
  */
 
