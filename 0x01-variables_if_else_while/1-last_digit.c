@@ -5,8 +5,8 @@
 /**
  * main - main block
  *
- * Description: Get a random number and print the number
- * and if it is positive, negative, or zero
+ * Description: Get a random number and print the number when it is 
+ * greater than 5, 0, less tha
  *
  * Return: 0
  *
