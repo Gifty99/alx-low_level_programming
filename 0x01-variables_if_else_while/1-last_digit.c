@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 /**
- *
  * main - main block
  *
  * Description: Get a random number and print the number
@@ -17,7 +16,7 @@ int main(void)
 
 {
 
-	int m,n;
+	int m, n;
 
 
 	srand(time(0));
