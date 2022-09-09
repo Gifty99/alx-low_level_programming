@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 /**
- *
  * main - main block
  *
  * Description: Print the alphabet in lowercase except q and e
@@ -20,17 +19,16 @@ int main(void)
 
 
 	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-
 	{
+
 		if (alphabet != 'e' && alphabet != 'q')
 
 			putchar(alphabet);
 
 	}
-
+	
 	putchar('\n');
 
 
 	return (0);
-
 }	
