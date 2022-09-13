@@ -2,7 +2,7 @@
 
 /**
  * _islower - contains islower function
- *
+ * @c: char type letter
  * Description: check for lowercase character
  *
  * Return: 1 if lowercase  or 0 if not
@@ -13,20 +13,11 @@ int _islower(int c)
 
 {
 
-	char alphabet;
-	int lower;
+	if (c >= 'a' && c <= 'z')
 
-	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-	{
-		if (alphabet == c)
-			lower = 1;
+		return (1);
 
-		else
-			lower = 0;
-
-	}
-
-	
-	return (lower);
+	else
+		return (0);
 
 }
