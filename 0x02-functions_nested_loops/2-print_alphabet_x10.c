@@ -5,7 +5,7 @@
  *
  * Description: Print 10 times the alphabet, in lowercase, followed by a new line
  *
- * Return: 0
+ * Return nothing
  *
  */
 
@@ -15,25 +15,17 @@ void print_alphabet(void)
 
 	char alphabet;
 	
-	int i = 1;
+	int i;
 
 
-	while (i <= 10)
+	for (i = 0; i < 10; i++)
 	{
-		alphabet = 'a';
 
-		while (alphabet <= 'z')
-		{
+		for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 
 			_putchar(alphabet);
 
-			alphabet++;
-
-		}
-
 		_putchar('\n');
-
-		i++;
 
 	}
 
