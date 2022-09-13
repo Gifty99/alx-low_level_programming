@@ -14,10 +14,11 @@ void print_alphabet(void)
 {
 
 	char alphabet;
-	int i = 0;
+	
+	int i = 1;
 
 
-	while (i < 10)
+	while (i <= 10)
 	{
 		alphabet = 'a';
 
