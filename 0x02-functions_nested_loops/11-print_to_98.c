@@ -27,7 +27,7 @@ void print_to_98(int n)
 			if (n == 98)
 				continue;
 
-				printf(", ");
+			printf(", ");
 
 		}
 
@@ -47,7 +47,7 @@ void print_to_98(int n)
 
 		}
 
-	printf("\n");
+		printf("\n");
 
 	}
 }
