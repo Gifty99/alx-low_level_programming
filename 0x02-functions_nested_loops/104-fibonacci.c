@@ -23,7 +23,7 @@ int main(void)
 
 	for (count = 2; count < 98; count++)
 	{
-		if (b1 + b2 > LARGEST || fr > 0 || f1 > 0)
+		if (b1 + b2 > LARGEST || f2 > 0 || f1 > 0)
 		{
 			h1 = (b1 + b2) / LARGEST;
 			h2 = (b1 + b2) % LARGEST;
