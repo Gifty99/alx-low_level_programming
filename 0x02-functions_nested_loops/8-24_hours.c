@@ -4,7 +4,7 @@
  * jack_bauer - compute the jack_buer
  *
  * Decription: Print every minute of the day of Jack Bauer
- * 
+ *
  * Start from 00:00 to 23:59
  *
  */
