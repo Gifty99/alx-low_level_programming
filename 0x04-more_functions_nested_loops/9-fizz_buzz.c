@@ -28,6 +28,7 @@ int main(void)
 			printf("%d ", f);
 	}
 
+	printf("Buzz\n");
 
 	return (0);
 }
