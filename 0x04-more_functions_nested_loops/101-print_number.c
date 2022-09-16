@@ -7,42 +7,34 @@
 
 void print_number(int n)
 {
-	unsigned int n2, number, base10 = 1;
+	if (n == 0)
+		_putchar('0');
 
-	if (n < 0)
+	else if (n < 0)
 	{
 		_putchar('-');
 
-		n2 = -n;
+		print_integer(n * -1);
 	}
 
 	else
-		n2 = n;
+		print_integer(n);
+}
 
-	number = n2;
+/**
+ * print_integer - A function to priting n
+ * @m: an input unsigned integer
+ * Return: Nothing
+ */
 
-	/* we get your base */
+void print_integer(int m)
+{
+	int i = 1000000000;
 
-	while (number > 9)
-	{
-		number = number / 10;
+	for (; i >= 1; i /= 10)
 
-		base10 = base10 * 10;
-	}
-
-	/* breakdown into base */
-
-	number = n2;
-
-	while (base10 > 1)
-	{
-		_putchar((number / base10) + '0');
-
-		number = number % base10;
-
-		base10 = base10 / 10;
-	}
-
-	_putchar((n2 % 10) + '0');
-
+		if (m / i != 0)
+		{
+			_putchar((m / i) % 10 + '0');
+		}
 }
