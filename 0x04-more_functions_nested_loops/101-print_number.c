@@ -7,34 +7,24 @@
 
 void print_number(int n)
 {
-	if (n == 0)
-		_putchar('0');
+	unsigned int n1;
 
-	else if (n < 0)
+
+	if (n < 0)
 	{
-		_putchar('-');
+		n1 = -n;
 
-		print_integer(n * -1);
+		_putchar('-');
 	}
 
 	else
-		print_integer(n);
-}
+		n1 = n;
 
-/**
- * print_integer - A function to priting n
- * @m: an input unsigned integer
- * Return: Nothing
- */
+	if (n1 / 10)
+	{
+		print_number(n1 / 10);
+	}
 
-void print_integer(int m)
-{
-	int i = 1000000000;
+	_putchar((n1 % 10) + '0');
 
-	for (; i >= 1; i /= 10)
-
-		if (m / i != 0)
-		{
-			_putchar((m / i) % 10 + '0');
-		}
 }
