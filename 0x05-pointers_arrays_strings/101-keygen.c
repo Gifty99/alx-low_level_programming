@@ -5,25 +5,28 @@
 /**
  * main - Entry point
  * Description: Generate random passwords for 101-crackme
- *
  * Return: 0 - success
  */
 
 int main(void)
 {
-	int sum;
-	char c;
+	int r = 0, c = 0;
+	time_t t;
 
-	srand(time(NULL));
+	srand((unsigned int) time(&t));
 
-	while (sum <= 2645)
+	while (c < 2772)
 	{
-		c = rand() % 128;
-		sum += c;
-		putchar(c);
+		r = rand() % 128;
+
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+
+		printf("%c", r);
 	}
 
-	putchar(2772 - sum);
+	printf("%c\n", (2772 - c));
 
 	return (0);
 }
