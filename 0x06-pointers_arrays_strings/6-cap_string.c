@@ -14,7 +14,7 @@ char *cap_string(char *s)
 
 	while (*(s + x))
 	{
-		for (y = 0; y < 11; y++)
+		for (y = 0; y < 13; y++)
 		{
 			if (x == 0 && s[x] >= 'a' && s[x] <= 'z')
 				s[x] -= ' ';
