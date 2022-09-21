@@ -13,17 +13,17 @@ char *cap_string(char *s)
 	char separators[] = {' ', '\t', '\n', ',', ';', '.', '!',
 	        '?', '"', '(', ')', '{', '}' };
 
-	while (*(s + x) != '\0')
+	while (*s[x] != '\0')
 	{
+		if (x == 0 && s[x] >= 'a' && s[x] <= 'z')
+			s[x] -= ' ';
+
 		for (y = 0; y < 13; y++)
 		{
-			if (x == 0 && s[x] >= 'a' && s[x] <= 'z')
-				s[x] -= ' ';
-
-			if (*(s + x) == separators[y])
+			if (s[x] == separators[y])
 			{
-				if ((*(s + x) >= 'a') && (*(s + x) <= 'z'))
-					*(s + x) -= ' ';
+				if (s[x + 1] >= 'a' && s[x + 1] <= 'z')
+					s[x + 1] -= ' ';
 			}
 		}
 
