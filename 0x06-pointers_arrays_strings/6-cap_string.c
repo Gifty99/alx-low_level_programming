@@ -9,25 +9,28 @@
 
 char *cap_string(char *s)
 {
-	int x = 0, y;
-	char separators[] = {' ', '\t', '\n', ',', ';', '.', '!',
-	        '?', '"', '(', ')', '{', '}' };
+	int count = 0, i;
+	char sep[] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}' };
 
-	while (*s[x] != '\0')
+	if (*(s + count) >= 'a' && *(s + count) <= 'a')
+		*(s + count) = *(s + count) - ' ';
+
+	count++;
+
+	while (*(s + count) != '\0')
 	{
-		if (x == 0 && s[x] >= 'a' && s[x] <= 'z')
-			s[x] -= ' ';
-
-		for (y = 0; y < 13; y++)
+		for (i = 0; i < 13; i++)
 		{
-			if (s[x] == separators[y])
+			if (*(s + count) == sep[i])
 			{
-				if (s[x + 1] >= 'a' && s[x + 1] <= 'z')
-					s[x + 1] -= ' ';
+				if ((*(s + (count + 1)) >= 'a') && (*(s + (count + 1)) <= 'z')
+					*(s + (count + 1)) = *(s + (count + 1)) - ' ';
+				break;
 			}
 		}
 
-		x++;
+		count++;
 	}
 
 	return (s);
