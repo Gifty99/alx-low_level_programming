@@ -13,14 +13,14 @@ char *cap_string(char *s)
 	char separators[] = {' ', '\t', '\n', ',', ';', '.', '!',
 	        '?', '"', '(', ')', '{', '}' };
 
-	while (*(s + x))
+	while (*(s + x) != '\0')
 	{
 		for (y = 0; y < 13; y++)
 		{
 			if (x == 0 && s[x] >= 'a' && s[x] <= 'z')
 				s[x] -= ' ';
 
-			if (s[x - 1] == separators[y])
+			if (*(s + x) == separators[y])
 			{
 				if ((*(s + x) >= 'a') && (*(s + x) <= 'z'))
 					*(s + x) -= ' ';
