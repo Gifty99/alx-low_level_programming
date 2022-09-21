@@ -12,30 +12,22 @@
  * Return: pointer to dest
  */
 
-char *_strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
-	int slen = 0, count = 0;
+	int x = 0;
+	int y = 0;
 
-	char *tmp = dest, *src_start = src;
+	while (dest[x])
+		x++;
 
-	while (*src)
+	while (y < n && src[y] != 0)
 	{
-		slen++;
-		src++;
+		dest[x] = src[y];
+		x++;
+		y++;
 	}
 
-	while (*dest)
-		dest++;
+	dest[x] = 0;
 
-	if (n > slen)
-		n = slen;
-
-	src = src_start;
-
-	for (; count < n; count++)
-		*dest++ = *src++;
-
-	*dest = '\0';
-
-	return (tmp);
+	return (dest);
 }
