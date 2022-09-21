@@ -10,7 +10,8 @@
 char *cap_string(char *s)
 {
 	int x = 0, y;
-	char separators[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}' }
+	char separators[] = {' ', '\t', '\n', ',', ';', '.', '!',
+	        '?', '"', '(', ')', '{', '}' };
 
 	while (*(s + x))
 	{
