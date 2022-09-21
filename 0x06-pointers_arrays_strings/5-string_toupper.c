@@ -10,7 +10,7 @@
 
 char *string_toupper(char *s)
 {
-	char *covert_string = s;
+	char *convert_string = s;
 
 	while (*s)
 	{
