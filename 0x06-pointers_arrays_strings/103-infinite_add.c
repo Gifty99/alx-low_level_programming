@@ -1,14 +1,13 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * infinite_add - adds two numbers
  * @n1: first number
  * @n2: second number
- * @r: buffer that the function will use to store the result.
+ * @r: buffer that the function will use to store the result
  * @size_r: buffer size:
- *
- * Return: 0
+ * Return: If r can store the sum - a pointer to the result
+ * if not, 0
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -36,8 +35,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			add = 0;
 		if (op > 0)
-
-		*(r + bg) = (op % 10) + 48;
+			*(r + bg) = (op % 10) + 48;
 		else
 			*(r + bg) = '0';
 		if (c1 > 0)
