@@ -10,7 +10,7 @@
 char *cap_string(char *s)
 {
 	int x = 0, y;
-	char separators[13] = {' ', '\t', '\n', ',', ';', '.', '!',
+	char separators[] = {' ', '\t', '\n', ',', ';', '.', '!',
 	        '?', '"', '(', ')', '{', '}' };
 
 	while (*(s + x))
@@ -22,7 +22,7 @@ char *cap_string(char *s)
 
 			if (s[x - 1] == separators[y])
 			{
-				if ((*(s + x) >= 'a') &&  (*(s + x) <= 'z'))
+				if ((*(s + x) >= 'a') && (*(s + x) <= 'z'))
 					*(s + x) -= ' ';
 			}
 		}
