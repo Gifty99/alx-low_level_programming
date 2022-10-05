@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		numcoins += 1;
 	}
 
-	printf("%d\n", ncoins);
+	printf("%d\n", numcoins);
 
 	return (0);
 }
