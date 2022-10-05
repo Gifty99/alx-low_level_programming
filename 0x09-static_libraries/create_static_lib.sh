@@ -1,4 +1,4 @@
-!#/bash/bin
+#!/bash/bin
 gcc -c *.c*
 ls
 ar -rc liball.a *.o
